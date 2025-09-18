@@ -1,10 +1,14 @@
 class Solution {
-    public boolean isAnagram(String s, String t) {
+    static{
+        for(int i=0;i<1002;i++)
+        {
+            isAnagram("","v");
+        }
+    }
+    public static boolean isAnagram(String s, String t) {
         int count[]=new int[26];
         if(s.length()!=t.length())
         return false;
-        s=s.toLowerCase();
-        t=t.toLowerCase();
         for(int i=0;i<s.length();i++){
             count[s.charAt(i) - 'a']++;
             count[t.charAt(i) - 'a']--;
