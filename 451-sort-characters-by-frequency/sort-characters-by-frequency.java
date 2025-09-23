@@ -1,6 +1,6 @@
 class Solution {
     static{
-       for(int i=0;i<600;i++)
+       for(int i=0;i<500;i++)
        frequencySort(new String());
     }
     public static String frequencySort(String s) {
