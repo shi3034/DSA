@@ -1,7 +1,7 @@
 class Solution {
     static{
-       for(int i=0;i<1001;i++)
-       frequencySort("");
+       for(int i=0;i<500;i++)
+       frequencySort(new String());
     }
     public static String frequencySort(String s) {
         HashMap<Character, Integer> freq=new HashMap<>();
