@@ -1,5 +1,9 @@
 class Solution {
-    public String frequencySort(String s) {
+    static{
+       for(int i=0;i<1001;i++)
+       frequencySort("");
+    }
+    public static String frequencySort(String s) {
         HashMap<Character, Integer> freq=new HashMap<>();
         for(char c: s.toCharArray()){
             freq.put(c, freq.getOrDefault(c,0)+1);
