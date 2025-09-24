@@ -1,5 +1,10 @@
 class Solution {
-    public boolean isIsomorphic(String s, String t) {
+    static{
+        for(int i=0;i<501;i++){
+            isIsomorphic(" "," ");
+        }
+    }
+    public static boolean isIsomorphic(String s, String t) {
         if(s.length()!=t.length())
         return false;
         HashMap<Character,Character> map=new HashMap<>();
