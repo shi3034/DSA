@@ -6,14 +6,11 @@ class Solution {
         {
         while(!st.isEmpty() && st.peek()<=nums2[i])
         st.pop();
-        if(st.isEmpty()){
-        st.push(nums2[i]);
+        if(st.isEmpty())
         num.put(nums2[i],-1);
-        }
-        else{
+        else
         num.put(nums2[i],st.peek());
         st.push(nums2[i]);
-        }
         }
         int nge[]=new int[nums1.length];
         for(int j=0;j<nums1.length;j++){
