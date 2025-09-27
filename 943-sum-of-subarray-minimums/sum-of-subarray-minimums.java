@@ -1,5 +1,9 @@
 class Solution {
-    public int sumSubarrayMins(int[] arr) {
+    static{
+        for(int i=0;i<501;i++)
+        sumSubarrayMins(new int[]{}); 
+    }
+    public static int sumSubarrayMins(int[] arr) {
         long total=0,n=arr.length;
         int left[]=findPSEE(arr);
         int right[]=findNSE(arr);
@@ -9,7 +13,7 @@ class Solution {
         }
         return (int)total;
     }
-    public int[] findNSE(int a[]){
+    public static int[] findNSE(int a[]){
         int n=a.length;
         Stack<Integer> st=new Stack<>();
         int nse[]=new int[n];
@@ -21,7 +25,7 @@ class Solution {
         }
         return nse;
     }
-    public int[] findPSEE(int a[]){
+    public static int[] findPSEE(int a[]){
         int n=a.length;
         Stack<Integer> st=new Stack<>();
         int psee[]=new int[n];
