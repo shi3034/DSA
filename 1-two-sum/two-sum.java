@@ -8,6 +8,7 @@ class Solution {
             {
                 ans[0]=i;
                 ans[1]=hash.get(complement);
+                return ans;
             }
             hash.put(nums[i],i);
         }
