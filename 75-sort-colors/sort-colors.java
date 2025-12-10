@@ -9,16 +9,11 @@ class Solution {
             else
             two++;
         }
-        int c=0;
         for(int i=0;i<nums.length;i++){
-            if(c<zero){
+            if(i<zero)
             nums[i]=0;
-            c++;
-            }
-            else if(c<zero+one){
+            else if(i<zero+one)
             nums[i]=1;
-            c++;
-            }
             else
             nums[i]=2;
         }
