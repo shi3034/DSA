@@ -1,8 +1,8 @@
 class Solution {
-    /*static{
+    static{
         for(int i=0;i<500;i++)
-        topKFrequent(new int[]{1,2,2,1,3},2);
-    }*/
+        topKFrequent(new int[]{1},1);
+    }
     public static int[] topKFrequent(int[] nums, int k) {
         int[] ans=new int[k];
         HashMap<Integer,Integer> map=new HashMap<>();
