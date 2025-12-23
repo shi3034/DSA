@@ -3,18 +3,14 @@ class Solution {
         int n=s.length(),i=0,j=n-1;
         while(i<j){
             if(s.charAt(i)!=s.charAt(j)){
-                if(isPalindrome(s.substring(i,j)) || isPalindrome(s.substring(i+1,j+1)))
-                return true;
-                else 
-                return false;
+                return isPalindrome(s,i+1,j) || isPalindrome(s,i,j-1);
             }
             i++;
             j--;
         }
         return true;
     }
-    public boolean isPalindrome(String str){
-        int i=0,j=str.length()-1;
+    public boolean isPalindrome(String str,int i,int j){
         while(i<j){
             if(str.charAt(i)!=str.charAt(j))
             return false;
