@@ -1,3 +1,5 @@
+##1
+
 APPROACH 1: 
 create an array double the size of the original array. run two loops to copy the elements of the original array to the newly created one.
 
