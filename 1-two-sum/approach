@@ -1,0 +1,7 @@
+##1 (30.01.2026)
+
+APPROACH 1:
+create a hash map
+iterate through the given array and for every element find its complement i.e., target-nums[i]
+check if the the complement is present in the hashmap, if yes return the indices of the number and its complement otherwise store that
+number in the hashmap along with its index.
