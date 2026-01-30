@@ -1,0 +1,8 @@
+##1 (30.01.2026)
+
+APPROACH 1:
+if the given array is null or the length of the array is 0, return ""
+assume that the first string is the longest prefix
+find the index of each prefix in each string of the given array by iterating through it
+keep reducing the prefix by 1 character 
+check if the prefix is empty
