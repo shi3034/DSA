@@ -1,0 +1,10 @@
+##1 (30.01.2026)
+
+APPROACH 1:
+create an array of size 26 let's say 'count'
+if lengths of two strings are not equal return false
+iterate through both the strings in the same loop
+for every character in 's' increment the 'count' array as follows: count[s.charAt(i) - 'a']++;
+for every character in 't' increment the 'count' array as follows: count[t.charAt(i) - 'a']--;
+iterate through 'count', if any value is !=0 return false
+
