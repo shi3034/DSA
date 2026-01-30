@@ -1,0 +1,7 @@
+##1 (30.01.2026)
+
+APPROACH 1:
+use a hashset. loop through the array. if at any point we cannot add a number to set it means that number already exists, hence it's a duplicate.
+
+APPROACH 2: 
+use insertion sort to sort the elements, duplicates should be adjacent.
