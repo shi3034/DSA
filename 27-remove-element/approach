@@ -1,0 +1,6 @@
+##1 (10.02.2026)
+
+-iterate through the array using two pointers both starting at 0
+-let's say we are using 'i' for normal iteration and and 'j' for iterating through the target values
+-if the current element is unequal to target, replace the previous element with this element and increment j
+-return j
