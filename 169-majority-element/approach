@@ -1,0 +1,9 @@
+##1 (18.02.2026)
+
+- logic: if an element appears more than n/2 times it means it appears more than all elements combined. assign an element to 'n'. if the same element
+apears again we increment 'count' else decrement. The element appearing more than n/2 times will remain as 'n' after all cancellations.
+- we keep a counter variable 'count' and another variable 'n'
+- if count=0, assign nums[i] to n.
+- if n==nums[i], increment count else decrement
+- return n
+
