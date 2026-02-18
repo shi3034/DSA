@@ -1,0 +1,12 @@
+##1 (18.02.2026)
+
+Approach 1:
+-create a hashmap of string and list of strings
+-convert each string to array and sort each of them
+-add them to the hashmap according to keys
+-return an arraylist of all values of the map
+
+Approach 2:(not always safe for long strings- may result in overflow but is a faster approach)
+-create a separate function to get a unique key for every word
+-each character is mapped to a prime number and we compare the product of all characters in the word.
+-we map the product of characters in the hashmap
