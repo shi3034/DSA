@@ -1,0 +1,6 @@
+##1 (18.02.2026)
+
+-create a private boolean array of size 10^6+1 since constraint specifies 0<=key<=10^6
+-add: if set[key] is false set it to true
+-remove: set[key]=false
+-contains: return set[key]
