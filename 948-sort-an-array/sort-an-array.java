@@ -1,20 +1,41 @@
 class Solution {
     public int[] sortArray(int[] nums) {
-        int min=nums[0],max=nums[0];
-        HashMap<Integer,Integer> map=new HashMap<>();
-        for(int i=0;i<nums.length;i++){
-            min=Math.min(min,nums[i]);
-            max=Math.max(max,nums[i]);
-            map.put(nums[i],map.getOrDefault(nums[i],0)+1);
-        }
-        int index=0;
-        for(int i=min;i<=max;++i){
-            while(map.getOrDefault(i,0)>0){
-                nums[index]=i;
-                index=index+1;
-                map.put(i,map.get(i)-1);
+        mergeSort(nums,0,nums.length-1);
+        return nums;
+    }
+    private void mergeSort(int[] arr, int l, int r){
+        if(l>=r)
+        return;
+        int m=(l+r)/2;
+        mergeSort(arr,l,m);
+        mergeSort(arr,m+1,r);
+        merge(arr,l,m,r);
+    }
+    private void merge(int[] arr, int l, int m, int r){
+        ArrayList<Integer> temp=new ArrayList<>();
+        int i=l,j=m+1;
+        while(i<=m && j<=r){
+            if(arr[i]<arr[j])
+            {
+                temp.add(arr[i]);
+                i++;
+            }
+            else
+            {
+                temp.add(arr[j]);
+                j++;
             }
         }
-        return nums;
+        while(i<=m){
+            temp.add(arr[i]);
+            i++;
+        }
+        while(j<=r){
+            temp.add(arr[j]);
+            j++;
+        }
+        for(int p=l;p<=r;p++){
+            arr[p]=temp.get(p-l);
+        }
     }
 }
