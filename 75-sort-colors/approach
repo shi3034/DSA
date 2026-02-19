@@ -1,0 +1,4 @@
+##1 (19.02.2026)
+
+-count the number of ones, twos and threes
+-iterate through the existing array and replace its elements based on the frequency of ones, twos and threes.
