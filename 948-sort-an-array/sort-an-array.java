@@ -1,67 +1,44 @@
-public class Solution {
+class Solution {
     public int[] sortArray(int[] nums) {
-        ArrayList<Integer> negatives = new ArrayList<>();
-        ArrayList<Integer> positives = new ArrayList<>();
-
-        for (int num : nums) {
-            if (num < 0) {
-                negatives.add(-num);
-            } else {
-                positives.add(num);
-            }
-        }
-
-        if (!negatives.isEmpty()) {
-            radixSort(negatives);
-            Collections.reverse(negatives);
-            for (int i = 0; i < negatives.size(); i++) {
-                negatives.set(i, -negatives.get(i));
-            }
-        }
-
-        if (!positives.isEmpty()) {
-            radixSort(positives);
-        }
-
-        int index = 0;
-        for (int num : negatives) {
-            nums[index++] = num;
-        }
-        for (int num : positives) {
-            nums[index++] = num;
-        }
+        int n=nums.length;
+        if(n==0 || n==1)
+        return nums;
+        mergeSort(nums,0,n-1);
         return nums;
     }
-
-    private void countSort(ArrayList<Integer> arr, int n, int d) {
-        int[] count = new int[10];
-        for (int num : arr) {
-            count[(num / d) % 10]++;
-        }
-        for (int i = 1; i < 10; i++) {
-            count[i] += count[i - 1];
-        }
-
-        ArrayList<Integer> res = new ArrayList<>(Collections.nCopies(n, 0));
-        for (int i = n - 1; i >= 0; i--) {
-            int idx = (arr.get(i) / d) % 10;
-            res.set(count[idx] - 1, arr.get(i));
-            count[idx]--;
-        }
-
-        for (int i = 0; i < n; i++) {
-            arr.set(i, res.get(i));
-        }
+    private void mergeSort(int[] arr, int l, int r){
+        if(l>=r)
+        return;
+        int m=(l+r)/2;
+        mergeSort(arr,l,m);
+        mergeSort(arr,m+1,r);
+        merge(arr,l,m,r);
     }
-
-    private void radixSort(ArrayList<Integer> arr) {
-        int n = arr.size();
-        int maxElement = Collections.max(arr);
-        int d = 1;
-
-        while (maxElement / d > 0) {
-            countSort(arr, n, d);
-            d *= 10;
+    private void merge(int[] arr, int l, int m, int r)
+    {
+        int[] temp=new int[r-l+1];
+        int i=l,j=m+1,index=0;
+        while(i<=m && j<=r){
+            if(arr[i]<arr[j]){
+                temp[index++]=arr[i];
+                i++;
+            }
+            else
+            {
+                temp[index++]=arr[j];
+                j++;
+            }
+        }
+        while(i<=m){
+            temp[index++]=arr[i];
+            i++;
+        }
+        while(j<=r){
+            temp[index++]=arr[j];
+            j++;
+        }
+        for(int p=l;p<=r;p++){
+            arr[p]=temp[p-l];
         }
     }
 }
