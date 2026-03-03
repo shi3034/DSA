@@ -1,6 +1,8 @@
 class Solution {
     public int[] productExceptSelf(int[] nums) {
-        int[] res=new int[nums.length];
+        int n=nums.length;
+        int[] res=new int[n];
+        Arrays.fill(res,0);
         int zeros=0,prod=1;;
         for(int val:nums){
             if(val==0)
@@ -8,9 +10,9 @@ class Solution {
             else
             prod=prod*val;
         }
-        for(int i=0;i<res.length;i++){
+        for(int i=0;i<n;i++){
             if(zeros>1)
-            res[i]=0;
+            return res;
             else if(zeros==1)
             res[i]=(nums[i]==0)?prod:0;
             else
