@@ -10,13 +10,14 @@ class Solution {
         int left=0,right=0,max=1;
         while(right<n)
         {
-            if(hash[s.charAt(right)]!=-1)
+            char ch=s.charAt(right);
+            if(hash[ch]!=-1)
             {
-                if(hash[s.charAt(right)]>=left)
-                left=hash[s.charAt(right)]+1;
+                if(hash[ch]>=left)
+                left=hash[ch]+1;
             }
             max=Math.max(max,right-left+1);
-            hash[s.charAt(right)]=right;
+            hash[ch]=right;
             right++;
         }
         return max;
