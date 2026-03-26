@@ -1,0 +1,24 @@
+##1 (26.03.2026)
+
+
+-Use a hash array to store last seen index
+-Create an array hash[256] and initialize all values to -1
+-This helps track the last occurrence of each character
+-Maintain a sliding window
+-Use two pointers:
+-left → start of current substring
+-right → end of current substring
+-Expand the window
+-Iterate right from 0 to n-1
+-For each character ch = s.charAt(right)
+-Handle repeating characters
+-If ch was seen before (hash[ch] != -1) and lies inside current window (hash[ch] >= left)
+-Move left to hash[ch] + 1 to avoid repetition
+-Update maximum length
+-Calculate current window length: (right - left + 1)
+-Update max if this length is larger
+-Update last seen index
+-Set hash[ch] = right
+-Return result
+-After traversal, return max
+
