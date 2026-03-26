@@ -1,0 +1,8 @@
+##1 (26.03.2026)
+
+-use a hash map
+-check is the element is already present in the map.
+-if it's present check the difference between the current index and the already stored index. 
+- if the difference <= k, return true.
+-else replace the previously stored index with the new index.
+-if the element is not present at all add it to the map with it's index.
