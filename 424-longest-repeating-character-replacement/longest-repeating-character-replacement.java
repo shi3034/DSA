@@ -3,18 +3,17 @@ class Solution {
         int n=s.length();
         int left=0,right=0,maxLen=0,maxFreq=0;
         int arr[]=new int[26];
+        char str[]=s.toCharArray();
         while(right<n)
         {
-            arr[s.charAt(right)-'A']++;
-            maxFreq=Math.max(maxFreq,arr[s.charAt(right)-'A']);
-            int size=right-left+1;
-            if(size-maxFreq>k)
+            arr[str[right]-'A']++;
+            maxFreq=Math.max(maxFreq,arr[str[right]-'A']);
+            while((right-left+1)-maxFreq>k)
             {
-            arr[s.charAt(left)-'A']--;
+            arr[str[left]-'A']--;
             left++;
             }
-            else
-            maxLen=Math.max(maxLen,size);
+            maxLen=Math.max(maxLen,right-left+1);
             right++;
         }
         return maxLen;
