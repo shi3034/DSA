@@ -1,0 +1,6 @@
+##1 (26.03.2026)
+
+-use sliding window approach
+-calculate the character with maximum frequency in each window 
+-((right-left+1)-maxFreq<=k) this condition should be satisfied.
+-remember calculate the maximum frequency dynamically.
