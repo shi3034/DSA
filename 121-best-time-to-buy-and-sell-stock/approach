@@ -1,0 +1,6 @@
+##1 (26.03.2026)
+
+-keep a variable min which stores the price at which the stock was bought.
+-while iterating, check if current price is less than min.
+-if yes, assign that price to min.
+-in every iteration we calculate profit=prices[i]-min and we check if it's greater than maximum profit.
