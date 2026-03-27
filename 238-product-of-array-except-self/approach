@@ -1,0 +1,6 @@
+##1 (27.03.2026)
+
+-create an answer array.
+-key idea: product of all nums before i * product of all numbers after i.
+-use one loop with variable left to store products of all numbers before i.
+-use another loop which starts from the last with the variable right to calculate left product * product of numbers after i.
