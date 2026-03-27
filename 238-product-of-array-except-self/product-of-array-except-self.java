@@ -10,10 +10,10 @@ class Solution {
             else
             prod=prod*val;
         }
-        for(int i=0;i<n;i++){
-            if(zeros>1)
+        if(zeros>1)
             return res;
-            else if(zeros==1)
+        for(int i=0;i<n;i++){
+            if(zeros==1)
             res[i]=(nums[i]==0)?prod:0;
             else
             res[i]=prod/nums[i];
