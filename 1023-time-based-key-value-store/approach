@@ -1,0 +1,7 @@
+approach
+
+-use a class Pair(timestamp,value)
+-use a hashmap of string and list<pair>
+-in the set function if the list is null, insert the key with a new list or if the list already exists just add the new pair
+-in the get function if map contains key use binary search to find else return ""
+-in the binary search function maintain a variable which stores the last occurred value in case that timestamp does not exist
