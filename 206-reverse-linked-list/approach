@@ -1,0 +1,10 @@
+approach
+
+-use 3 pointers: prev, curr, next
+-prev initially points to null
+-next points to prev
+-curr points to next
+-prev points to curr
+curr.next=prev;
+prev=curr;
+curr=next;
