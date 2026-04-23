@@ -28,17 +28,13 @@ class TimeMap {
         if(map.containsKey(key))
         {
             List<Pair> list=map.get(key);
-            int index=bs(0,list.size()-1,list,timestamp);
-            if(index==-1)
-            return "";
-            else
-            return list.get(index).value;
+            return bs(0,list.size()-1,list,timestamp);
         }
         return "";
     }
-    private int bs(int start,int end,List<Pair> list, int timestamp)
+    private String bs(int start,int end,List<Pair> list, int timestamp)
     {
-        int ans=-1;
+        String ans="";
         while(start<=end)
         {
             int mid=start+(end-start)/2;
@@ -47,10 +43,10 @@ class TimeMap {
             else if(timestamp>list.get(mid).timestamp)
             {
             start=mid+1;
-            ans=mid;
+            ans=list.get(mid).value;
             }
             else
-            return mid;
+            return list.get(mid).value;
         }
         return ans;
     }
