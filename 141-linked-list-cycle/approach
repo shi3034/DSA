@@ -1,0 +1,8 @@
+approach
+
+-use slow-fast approach
+-both pointers initially point to the same head
+-slow moves at speed 1
+-fast moves at speed 2
+-if a cycle exists they will meet at some point
+-if head is null return false
