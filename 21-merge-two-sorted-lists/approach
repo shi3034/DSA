@@ -1,0 +1,7 @@
+approach
+
+-use a different pointer which marks the beginning of the new merged list
+-compare values of list1 and list2
+-keep adding the smaller values
+-in the end add the remaining elements of both the lists
+-keep a dummy node which points to the head of the merged list
