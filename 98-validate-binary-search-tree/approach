@@ -1,0 +1,3 @@
+-create a separate function with 3 parameters: the root, a min value and a max value
+-make sure that the each node should stay within the min to max range
+-run this function recursively by updating values of min and max accordingly
