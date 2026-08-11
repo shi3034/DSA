@@ -8,7 +8,6 @@ class Solution {
                 break;
             if(digits[i]==9)
             {
-                digits[i]+=c;
                 digits[i]=0;
             }
             else
