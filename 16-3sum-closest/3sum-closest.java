@@ -1,23 +1,19 @@
 class Solution {
     public int threeSumClosest(int[] nums, int target) {
         int n=nums.length;
-        int[] sums=new int[n];
         Arrays.sort(nums);
-        for(int i=0;i<n-2;i++)
-        {
-            int complement=target-nums[i];
-            sums[i]=nums[i]+twoSum(nums,n,i,complement);
-        }
         int min=Integer.MAX_VALUE,ans=0;
         for(int i=0;i<n-2;i++)
         {
-            if(Math.abs(target-sums[i])<=min)
+            int complement=target-nums[i];
+            int currentSum=nums[i]+twoSum(nums,n,i,complement);
+            if(Math.abs(target-currentSum)<=min)
             {
-                min=Math.abs(target-sums[i]);
-                ans=sums[i];
+                min=Math.abs(target-currentSum);
+                ans=currentSum;
             }
         }
-        return ans;
+        return ans;    
     }
     private int twoSum(int[] nums, int n, int start, int complement)
     {
