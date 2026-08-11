@@ -1,0 +1,8 @@
+-maintain a variable for storing the carry, initial value=1.
+-start looping from the end of the array.
+-if the carry is 0, break out of the loop.
+-if the current digit=9, make it 0.
+-else add the carry to the digit and make carry=0.
+-come out of the loop.
+-if carry is still 1, create a new array with size 1 greater than the original array.
+-keep first element=1 and copy paste remaining elements from the original array.
